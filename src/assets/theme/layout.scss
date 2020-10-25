@@ -1,0 +1,29 @@
+@import "src/assets/theme/color.scss";
+@import "src/assets/theme/breakpoints.scss";
+
+body {
+  background: $grey !important;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
+
+.content-area {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  overflow: hidden;
+  @include breakpoint(sm) {
+    padding: 0 18px;
+  }
+}
+
+.full-width {
+  width: 100%;
+}

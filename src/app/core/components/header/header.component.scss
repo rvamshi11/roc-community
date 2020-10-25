@@ -1,0 +1,76 @@
+@import 'src/assets/theme/theme.scss';
+.top-bar {
+  height: 75px;
+  background-color: $white;
+  & .header-logo {
+    display: none;
+    @include breakpoint(sm) {
+      display: block;
+      height: 176px;
+      width: 346px;
+    }
+  }
+}
+
+header {
+  & .header-container {
+    height: 60px;
+    background-color: $brown;
+    width: 100%;
+  }
+
+
+
+  & .menu-container {
+    display: none;
+    @include breakpoint(sm) {
+      width: calc(100% - 346px);
+      text-align: right;
+      float: right;
+      height: 100%;
+      display: block;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+
+      & .navigation-items {
+        color: $light-grey;
+      }
+    }
+  }
+
+  & .mobile-menu {
+    display: block;
+    position: relative;
+    z-index: 100;
+    background-color: $white;
+    @include breakpoint(sm) {
+      display: none;
+    }
+    ul.navbar-nav {
+      padding: 15px;
+      li.nav-item {
+        padding: 10px 0px;
+        border-bottom: 1px solid $grey;
+      }
+      a {
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.14;
+        letter-spacing: 0.5px;
+        color: $brown;
+      }
+    }
+  }
+}
+
+
